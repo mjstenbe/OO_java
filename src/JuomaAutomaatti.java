@@ -14,8 +14,8 @@ public class JuomaAutomaatti {
 
 	public String toString() {
 
-		return "Kahvia j‰ljell‰: " + this.getKahvia() + " yksikkˆ‰. Teet‰ j‰ljell‰:  " + this.getTeeta()
-				+ " yksikkˆ‰. Kaakaota j‰ljell‰: " + this.getKaakaota() + " yksikkˆ‰.\n";
+		return "Kahvia j√§ljell√§: " + this.getKahvia() + " yksikk√∂√§. Teet√§ j√§ljell√§:  " + this.getTeeta()
+				+ " yksikk√∂√§. Kaakaota j√§ljell√§: " + this.getKaakaota() + " yksikk√∂√§.\n";
 
 	}
 
@@ -49,7 +49,7 @@ public class JuomaAutomaatti {
 			System.out.println("Odota hetki, kahvisi valmistuu.");
 		} else {
 			System.out.println(
-					"Kahvi on valitettavasti loppunut. T‰yt‰ s‰iliˆ valmistaaksesi uuden juoman tai valitse toinen tuote.");
+					"Kahvi on valitettavasti loppunut. T√§yt√§ s√§ili√∂ valmistaaksesi uuden juoman tai valitse toinen tuote.");
 
 		}
 	}
@@ -61,7 +61,7 @@ public class JuomaAutomaatti {
 
 		} else {
 			System.out.println(
-					"Tee on valitettavasti loppunut. T‰yt‰ s‰iliˆ valmistaaksesi uuden juoman tai valitse toinen tuote.");
+					"Tee on valitettavasti loppunut. T√§yt√§ s√§ili√∂ valmistaaksesi uuden juoman tai valitse toinen tuote.");
 
 		}
 
@@ -74,7 +74,7 @@ public class JuomaAutomaatti {
 
 		} else {
 			System.out.println(
-					"Kaakao on valitettavasti loppunut. T‰yt‰ s‰iliˆ valmistaaksesi uuden juoman tai valitse toinen tuote.");
+					"Kaakao on valitettavasti loppunut. T√§yt√§ s√§ili√∂ valmistaaksesi uuden juoman tai valitse toinen tuote.");
 
 		}
 
@@ -82,7 +82,7 @@ public class JuomaAutomaatti {
 
 	public boolean onnistuuko() {
 		int luku = (int) (Math.random() * 100 + 1);
-		return luku > 25;
+		return luku > 25; // Hieno optimointi
 
 	}
 
@@ -95,7 +95,7 @@ public class JuomaAutomaatti {
 		do {
 			System.out.println("********JUOMA-AUTOMAATTI********");
 			System.out.println();
-			System.out.println("Ole hyv‰ ja valitse haluamasi juoma. \nValitsemalla 'Lopeta', ohjelma p‰‰ttyy.");
+			System.out.println("Ole hyv√§ ja valitse haluamasi juoma. \nValitsemalla 'Lopeta', ohjelma p√§√§ttyy.");
 			System.out.println();
 			System.out.println("1. Kahvi\n2. Tee\n3. Kaakao\n4. Lopeta");
 			System.out.println();
@@ -107,12 +107,12 @@ public class JuomaAutomaatti {
 				break;
 			}
 			if (valinta > 4) {
-				System.out.println("Tuntematon valinta. Ole hyv‰ ja yrit‰ uudelleen.");
+				System.out.println("Tuntematon valinta. Ole hyv√§ ja yrit√§ uudelleen.");
 				System.out.println(omaKone);
 				continue;
 			}
 
-			if (!omaKone.onnistuuko()) {
+			if (!omaKone.onnistuuko()) { // T√§m√§kin on oivalta ratkaisu. Toinen tapa on ajaa onnistuuko-metodi aina juoman valmistuksen yhteydess√§.
 				System.out.println(
 						"Hups! Tapahtui virhe - juoman teko ei onnistu. Kiitos kuitenkin maksustasi.");
 				System.exit(0);
